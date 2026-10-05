@@ -9,6 +9,7 @@ export const portfolioData = {
     availability: "Available for Immediate Full-Time Roles & Opportunities",
     github: "https://github.com/DhaneswarRC",
     linkedin: "https://linkedin.com/in/dhaneswar-r-c-335530309",
+    avatarUrl: "/avatar.jpg",
     twitter: "",
     medium: "",
     resumePdfUrl: "#",

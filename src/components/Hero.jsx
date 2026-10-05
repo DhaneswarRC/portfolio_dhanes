@@ -5,9 +5,9 @@ import { GithubIcon, LinkedinIcon } from './Icons';
 export default function Hero({ personal, stats, onOpenResume }) {
   const [avatarImage, setAvatarImage] = useState(() => {
     try {
-      return localStorage.getItem('portfolio-avatar-image') || null;
+      return localStorage.getItem('portfolio-avatar-image') || personal.avatarUrl || '/avatar.jpg';
     } catch {
-      return null;
+      return personal.avatarUrl || '/avatar.jpg';
     }
   });
 
@@ -105,7 +105,7 @@ export default function Hero({ personal, stats, onOpenResume }) {
                 <img
                   src={avatarImage}
                   alt={personal.name}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%' }}
                 />
               ) : (
                 <div style={{ textAlign: 'center', color: 'var(--text-primary)' }}>
